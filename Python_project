@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Aug 24 17:58:07 2019
+
+@author: Lenovo
+"""
+
+choice=int(input("How many games you want to play"))
+guess=1
+number=23
+for i in range(choice):
+    random_number=int(input("Please put any random number between 1-25"))
+    if 1<=random_number<=25:
+        if random_number>number:
+            print("The number you chose is higher than the default number!!")
+            guess+=1
+            if i==choice-1:
+                 print("This was your last turn and did not guessed it right sorry!!!")
+        elif random_number<number :
+            print("The number you chose is lower than the default number!!")
+            guess+=1
+            if i==choice-1:
+                 print("This was your last turn and did not guessed it right sorry!!!")
+        elif random_number==number :
+            print("You guessed it right and it took you ",guess," guess")
+            break;
+        else:
+            print("This was your last turn and did not guessed it right sorry!!!")
+            break;
+    else:
+        print("please choose the number between 1 and 25 and run the program again")
+        break;
+   
